@@ -2,10 +2,7 @@ package com.proyecto.market.persistence.mapper;
 
 import com.proyecto.market.domain.Category;
 import com.proyecto.market.persistence.entity.Categoria;
-import org.mapstruct.InheritConfiguration;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.Mappings;
+import org.mapstruct.*;
 
 @Mapper(componentModel = "spring")
 public interface CategoryMapper {
@@ -18,7 +15,7 @@ public interface CategoryMapper {
     })
     Category toCategory(Categoria categoria);
 
-    @InheritConfiguration
+    @InheritInverseConfiguration
     @Mapping(target = "productos", ignore = true)
     Categoria toCategoria(Category category);
 }

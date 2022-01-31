@@ -20,7 +20,7 @@ public class Cliente {
     @Column(name = "apellidos")
     private String apellido;
 
-    private Integer celular;
+    private Long celular;
     private String direccion;
 
     @Column(name = "correo_electronico")
@@ -53,11 +53,11 @@ public class Cliente {
         this.apellido = apellido;
     }
 
-    public Integer getCelular() {
+    public Long getCelular() {
         return celular;
     }
 
-    public void setCelular(Integer celular) {
+    public void setCelular(Long celular) {
         this.celular = celular;
     }
 
@@ -77,6 +77,11 @@ public class Cliente {
         this.email = email;
     }
 
+    public List<Compra> getCompras() {
+        return compras;
+    }
 
-    
+    public void setCompras(List<Compra> compras) {
+        this.compras = compras;
+    }
 }

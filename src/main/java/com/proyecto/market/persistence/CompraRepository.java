@@ -6,6 +6,7 @@ import com.proyecto.market.persistence.crud.CompraCrudRepository;
 import com.proyecto.market.persistence.entity.Compra;
 import com.proyecto.market.persistence.mapper.PurchaseMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
