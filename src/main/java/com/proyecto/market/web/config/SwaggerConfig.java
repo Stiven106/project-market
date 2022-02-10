@@ -1,4 +1,4 @@
-package com.proyecto.market.web.controller.config;
+package com.proyecto.market.web.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +15,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.platzi.market.web.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.proyecto.market.web.controller"))
                 .build();
     }
 }
